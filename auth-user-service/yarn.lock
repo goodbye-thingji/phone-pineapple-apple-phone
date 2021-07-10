@@ -1072,15 +1072,14 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-express-oracle-session2@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/express-oracle-session2/-/express-oracle-session2-0.1.0.tgz#c3843e6ac6d62366cbe789f47b9d57445487035a"
-  integrity sha512-iv+sKzipvHb8D3vcaxlYH9KOZeQC4pkNDimLmHCUUFaSIZd1AuDRlyxi7/Db5NGYN4KlFgR0K8NMtnT5DqeS3Q==
+express-oracle-session-ts@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/express-oracle-session-ts/-/express-oracle-session-ts-0.0.4.tgz#16df1db3536fafb3d61ee3be7d42dd52f80db249"
+  integrity sha512-64/X6rAO1tYiWc7lH2YWSSkXjt84b5x2gNQn5yYVLFON4iYN4vKkN0EqHaKWNBAUyma4J7CCJ98kTgSdUaLLRA==
   dependencies:
-    express-session "^1.17.1"
     oracledb "^5.0.0"
 
-express-session@^1.17.1, express-session@^1.17.2:
+express-session@^1.17.2:
   version "1.17.2"
   resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.17.2.tgz#397020374f9bf7997f891b85ea338767b30d0efd"
   integrity sha512-mPcYcLA0lvh7D4Oqr5aNJFMtBMKPLl++OKKxkHzZ0U0oDq1rpKBnkR5f5vCHR26VeArlTOEF9td4x5IjICksRQ==
