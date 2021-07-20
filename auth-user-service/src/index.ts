@@ -2,10 +2,14 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import logger from "morgan";
+import passport from "passport";
 import session from "express-session";
 import initOracleSessionStore from "express-oracle-session-ts";
 
 import dbConfig from "./config/dbConfig";
+import { initPool, initTables } from "./model";
+import "./lib/passportInit";
+import api from "./api";
 
 dotenv.config();
 
@@ -45,9 +49,20 @@ app.use(
     store: sessionStore,
   }),
 );
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use("/api", api);
 
 app.listen(PORT || 8081, async () => {
-  if (NODE_ENV === "development") {
-    console.log(`Server listening on port ${PORT}`);
+  try {
+    await initPool();
+    await initTables();
+    if (NODE_ENV === "development") {
+      console.log(`Server listening on port ${PORT}`);
+    }
+  } catch (err) {
+    console.error(err);
+    process.exit(-1);
   }
 });
